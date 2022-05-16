@@ -1,0 +1,30 @@
+﻿@model IEnumerable<TaskProject.Models.User>
+@{
+    ViewData["Title"] = "Index";
+}
+<link href="~/css/site.css" rel="stylesheet" />
+<div class="box">
+    <h1>User Data</h1>
+    <table class="table table-bordered">
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>ZipCode</td>
+            <td>CityName</td>
+        </tr>
+        @foreach (var emps in Model)
+        {
+            <tr>
+                <td>@emps.ID</td>
+                <td>@emps.Name</td>
+                <td>@emps.Zipcode.ID</td>
+                <td>@emps.CityName.ID</td>
+            </tr>
+
+        }
+    </table>
+</div>
+
+
+
+
